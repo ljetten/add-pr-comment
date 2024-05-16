@@ -70,7 +70,9 @@ export async function getMessageFromPath(searchPath: string) {
   }
 
   // return trimmed message if message is too long (maximum is 65536 characters)
-  return message.length > maxCharacterLength ? message.substring(0, maxCharacterLength - 3) + "..." : message
+  return message.length > maxCharacterLength
+    ? message.substring(0, maxCharacterLength - 3) + "..."
+    : message
 }
 
 export function addMessageHeader(messageId: string, message: string) {
